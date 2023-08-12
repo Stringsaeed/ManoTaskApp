@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/BricolageGrotesque-Bold.ttf",
+      "sha1": "91f8bf71825431e27a1ca46687c0b459725c6379"
+    },
+    {
+      "path": "src/assets/fonts/BricolageGrotesque-Medium.ttf",
+      "sha1": "bb2530ead29c80c488bb521ac2e21271123670dd"
+    },
+    {
+      "path": "src/assets/fonts/BricolageGrotesque-Regular.ttf",
+      "sha1": "29c0acab3aab07504a398d0f6c77ad3f939f658c"
+    },
+    {
+      "path": "src/assets/fonts/BricolageGrotesque-SemiBold.ttf",
+      "sha1": "a81009a13973c2a7c878dcc5547a909eeb7bf8f5"
+    }
+  ]
+}
