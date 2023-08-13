@@ -1,5 +1,6 @@
 import React from 'react';
 import {ColorValue, StyleProp, Text, TextProps, TextStyle} from 'react-native';
+import {theme} from 'themes';
 
 export interface ManoTextProps extends TextProps {
   tabular?: boolean;
@@ -22,34 +23,20 @@ export default function ManoText(props: ManoTextProps) {
   return <Text {...rest} style={textStyles} />;
 }
 
-const fontMapper = {
-  '100': 'BricolageGrotesque-Regular',
-  '200': 'BricolageGrotesque-Regular',
-  '300': 'BricolageGrotesque-Regular',
-  '400': 'BricolageGrotesque-Regular',
-  '500': 'BricolageGrotesque-Medium',
-  '600': 'BricolageGrotesque-SemiBold',
-  '700': 'BricolageGrotesque-Bold',
-  '800': 'BricolageGrotesque-Bold',
-  '900': 'BricolageGrotesque-Bold',
-  bold: 'BricolageGrotesque-Bold',
-  normal: 'BricolageGrotesque-Regular',
-};
-
 const useTextStyle = ({
   style,
   tabular,
   transform,
   weight = 'normal',
   size,
-  color = '#010011',
+  color = theme.colors.text,
 }: ManoTextProps) => {
   const fontVariant: TextStyle['fontVariant'] = tabular ? ['tabular-nums'] : [];
   const textTransform = transform || 'none';
   const textStyles: StyleProp<TextStyle> = [
     style,
     {
-      fontFamily: fontMapper[weight],
+      fontFamily: theme.fonts[weight],
       fontVariant,
       textTransform,
       fontSize: size,

@@ -4,6 +4,7 @@ import FastImage from 'react-native-fast-image';
 import {Dimensions, FlatList, StyleSheet} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {IImage, IListRenderItemInfo} from 'types';
+import {theme} from 'themes';
 
 export default function ProductCarousel() {
   const {top} = useSafeAreaInsets();
@@ -35,7 +36,7 @@ export default function ProductCarousel() {
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'flex-start',
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.background,
     flexGrow: 0,
     marginHorizontal: -16,
   },

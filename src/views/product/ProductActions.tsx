@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import {Button} from 'components';
 import {useProductContext} from 'contexts';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {theme} from 'themes';
 
 export default function ProductActions() {
   const {bottom} = useSafeAreaInsets();
@@ -18,10 +19,10 @@ export default function ProductActions() {
 
   return (
     <Button
-      color="#e71233"
+      color={theme.colors.primary}
       disabled={isDisabled}
       label={label}
-      labelProps={{color: 'white'}}
+      labelProps={{color: theme.colors.onPrimary}}
       style={style}
     />
   );

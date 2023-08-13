@@ -1,6 +1,7 @@
 import React from 'react';
 import {ManoText} from 'components';
 import {useProductContext} from 'contexts';
+import {theme} from 'themes';
 
 export default function ProductCategory() {
   const {product} = useProductContext();
@@ -10,7 +11,7 @@ export default function ProductCategory() {
     return null;
   }
   return (
-    <ManoText color="#e71233" transform="capitalize" weight="500">
+    <ManoText color={theme.colors.primary} transform="capitalize" weight="500">
       {brand}
     </ManoText>
   );

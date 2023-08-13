@@ -7,6 +7,7 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 import ManoText from 'components/ManoText';
+import {theme} from 'themes';
 
 const {Screen, Navigator} = createNativeStackNavigator<MainStackParamsList>();
 
@@ -25,7 +26,7 @@ function defaultScreenOptions() {
     headerBackButtonMenuEnabled: false,
     headerShadowVisible: false,
     headerLargeTitleShadowVisible: false,
-    headerTintColor: '#e71233',
+    headerTintColor: theme.colors.primary,
     headerTitle({children}) {
       return (
         <ManoText weight="500" size={18}>
