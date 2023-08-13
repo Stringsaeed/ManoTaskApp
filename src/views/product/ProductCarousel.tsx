@@ -1,4 +1,4 @@
-import {useProductScreenContext} from 'contexts';
+import {useProductContext} from 'contexts';
 import React, {useCallback} from 'react';
 import FastImage from 'react-native-fast-image';
 import {Dimensions, FlatList, StyleSheet} from 'react-native';
@@ -7,7 +7,7 @@ import {IImage, IListRenderItemInfo} from 'types';
 
 export default function ProductCarousel() {
   const {top} = useSafeAreaInsets();
-  const {product} = useProductScreenContext();
+  const {product} = useProductContext();
   const renderImage = useCallback(({item}: IListRenderItemInfo<IImage>) => {
     return (
       <FastImage

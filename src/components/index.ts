@@ -5,3 +5,5 @@ export {default as Product} from './Product';
 export {default as Separator} from './Separator';
 export {default as Price} from './Price';
 export {default as Button} from './Button';
+export {default as RowWrapContainer} from './RowWrapContainer';
+export {default as Spacer} from './Spacer';

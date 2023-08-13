@@ -1,11 +1,11 @@
+import {useProductContext} from 'contexts';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import FastImage from 'react-native-fast-image';
-import {useProductItemContext} from './context';
 
 export default function ProductImage() {
-  const {item} = useProductItemContext();
-  const imageURI = item.images.at(0)?.thumbnail;
+  const {product} = useProductContext();
+  const imageURI = product.images.at(0)?.thumbnail;
 
   return <FastImage source={{uri: imageURI}} style={styles.image} />;
 }

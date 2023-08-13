@@ -1,10 +1,12 @@
-import {ProductScreenProvider} from 'contexts';
+import {Spacer} from 'components';
+import {ProductProvider} from 'contexts';
 import React, {PropsWithChildren} from 'react';
 import {IProduct} from 'types';
 import ProductActions from './ProductActions';
 import ProductCarousel from './ProductCarousel';
 import ProductCategory from './ProductCategory';
 import ProductContainer from './ProductContainer';
+import ProductPageSimilar from './ProductPageSimilar';
 import ProductPrice from './ProductPrice';
 import ProductTitle from './ProductTitle';
 
@@ -14,9 +16,9 @@ interface Props {
 
 function ProductPage({children, product}: PropsWithChildren<Props>) {
   return (
-    <ProductScreenProvider product={product}>
+    <ProductProvider product={product}>
       <ProductContainer>{children}</ProductContainer>
-    </ProductScreenProvider>
+    </ProductProvider>
   );
 }
 
@@ -25,5 +27,7 @@ ProductPage.Title = ProductTitle;
 ProductPage.Price = ProductPrice;
 ProductPage.Actions = ProductActions;
 ProductPage.Category = ProductCategory;
+ProductPage.SimilarProducts = ProductPageSimilar;
+ProductPage.Spacer = Spacer;
 
 export default ProductPage;

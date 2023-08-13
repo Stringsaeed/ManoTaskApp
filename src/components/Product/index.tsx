@@ -1,7 +1,7 @@
+import {ProductProvider} from 'contexts';
 import React from 'react';
 import {IListRenderItemInfo, IProduct} from 'types';
 
-import ProductItemProvider from './context';
 import ProductBrand from './ProductBrand';
 import ProductContainer from './ProductContainer';
 import ProductImage from './ProductImage';
@@ -15,9 +15,9 @@ type ProductItemProps = IListRenderItemInfo<IProduct> & {
 
 function ProductItem({item, index, onPress, children}: ProductItemProps) {
   return (
-    <ProductItemProvider onPress={onPress} item={item} index={index}>
+    <ProductProvider onPress={onPress} product={item} index={index}>
       <ProductContainer>{children}</ProductContainer>
-    </ProductItemProvider>
+    </ProductProvider>
   );
 }
 

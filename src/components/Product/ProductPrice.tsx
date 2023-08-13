@@ -1,26 +1,18 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
 import Price from 'components/Price';
+import RowWrapContainer from 'components/RowWrapContainer';
+import {useProductContext} from 'contexts';
 
-import {useProductItemContext} from './context';
 import ProductDiscount from './ProductDiscount';
 
 export default function ProductPrice() {
-  const {item} = useProductItemContext();
-  const {price} = item;
+  const {product} = useProductContext();
+  const {price} = product;
 
   return (
-    <View style={styles.container}>
+    <RowWrapContainer gap={8}>
       <Price price={price} weight="500" size={16} />
       <ProductDiscount />
-    </View>
+    </RowWrapContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-  },
-});

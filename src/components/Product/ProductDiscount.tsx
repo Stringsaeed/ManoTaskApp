@@ -1,11 +1,15 @@
 import React from 'react';
 import Price from 'components/Price';
 
-import {useProductItemContext} from './context';
+import {useProductContext} from 'contexts';
 
-export default function ProductDiscount() {
-  const {item} = useProductItemContext();
-  const {discounted_price, original_price} = item;
+interface Props {
+  size?: number;
+}
+
+export default function ProductDiscount({size = 14}: Props) {
+  const {product} = useProductContext();
+  const {discounted_price, original_price} = product;
   const originalPriceValue = parseInt(original_price ?? '0', 10);
   const discountedPriceValue = parseInt(discounted_price ?? '0', 10);
   const hasDiscount =
@@ -15,5 +19,5 @@ export default function ProductDiscount() {
     return null;
   }
 
-  return <Price isDiscount price={original_price} size={14} />;
+  return <Price isDiscount price={original_price} size={size} />;
 }

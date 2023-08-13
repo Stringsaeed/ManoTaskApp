@@ -1,22 +1,24 @@
 import React from 'react';
-import {
-  StyleProp,
-  Text,
-  TextProps,
-  TextStyle,
-  useColorScheme,
-} from 'react-native';
+import {ColorValue, StyleProp, Text, TextProps, TextStyle} from 'react-native';
 
 export interface ManoTextProps extends TextProps {
   tabular?: boolean;
   weight?: TextStyle['fontWeight'];
   size?: TextStyle['fontSize'];
   transform?: 'uppercase' | 'lowercase' | 'capitalize';
+  color?: ColorValue;
 }
 
 export default function ManoText(props: ManoTextProps) {
-  const {style, tabular, transform, weight, size, ...rest} = props;
-  const textStyles = useTextStyle({style, tabular, transform, weight, size});
+  const {style, tabular, transform, weight, size, color, ...rest} = props;
+  const textStyles = useTextStyle({
+    style,
+    tabular,
+    transform,
+    weight,
+    size,
+    color,
+  });
   return <Text {...rest} style={textStyles} />;
 }
 
@@ -40,8 +42,8 @@ const useTextStyle = ({
   transform,
   weight = 'normal',
   size,
+  color = '#010011',
 }: ManoTextProps) => {
-  const isDark = useColorScheme() === 'dark';
   const fontVariant: TextStyle['fontVariant'] = tabular ? ['tabular-nums'] : [];
   const textTransform = transform || 'none';
   const textStyles: StyleProp<TextStyle> = [
@@ -51,7 +53,7 @@ const useTextStyle = ({
       fontVariant,
       textTransform,
       fontSize: size,
-      color: isDark ? '#fff' : '#000',
+      color,
     },
   ];
 

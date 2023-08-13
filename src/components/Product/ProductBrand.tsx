@@ -1,10 +1,10 @@
 import React from 'react';
 import ManoText from 'components/ManoText';
-import {useProductItemContext} from './context';
+import {useProductContext} from 'contexts';
 
 export default function ProductBrand() {
-  const {item} = useProductItemContext();
-  const {brand} = item;
+  const {product} = useProductContext();
+  const {brand} = product;
 
   if (!brand) {
     return null;

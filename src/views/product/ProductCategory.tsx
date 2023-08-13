@@ -1,16 +1,16 @@
 import React from 'react';
 import {ManoText} from 'components';
-import {useProductScreenContext} from 'contexts';
+import {useProductContext} from 'contexts';
 
 export default function ProductCategory() {
-  const {product} = useProductScreenContext();
+  const {product} = useProductContext();
   const {brand} = product;
 
   if (!brand) {
     return null;
   }
   return (
-    <ManoText transform="capitalize" weight="500">
+    <ManoText color="#e71233" transform="capitalize" weight="500">
       {brand}
     </ManoText>
   );
