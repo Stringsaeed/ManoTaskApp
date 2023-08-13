@@ -14,7 +14,8 @@
       "configs/*": ["./constants/*"],
       "configs": ["./constants"],
       "i18n/*": ["./i18n/*"],
-      "views/*": ["./views/*"]
+      "views/*": ["./views/*"],
+      "themes": ["./themes"]
     }
   }
 }

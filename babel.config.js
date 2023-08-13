@@ -18,6 +18,7 @@ module.exports = {
           configs: './src/constants',
           i18n: './src/i18n',
           views: './src/views',
+          themes: './src/themes',
         },
       },
     ],
