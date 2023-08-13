@@ -1,5 +1,5 @@
 module.exports = {
-  presets: ['@rnx-kit/babel-preset-metro-react-native'],
+  presets: ['module:metro-react-native-babel-preset'],
   plugins: [
     [
       'module-resolver',
@@ -21,6 +21,5 @@ module.exports = {
         },
       },
     ],
-    'react-native-reanimated/plugin',
   ],
 };
