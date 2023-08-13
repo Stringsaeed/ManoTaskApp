@@ -64,9 +64,6 @@ You've successfully run and modified your React Native App. :partying_face:
   - Fast & Performant React Native List
 - [FastImage](https://github.com/DylanVann/react-native-fast-image#readme)
   - FastImage, performant React Native image component.
-- [React Native Localize](https://github.com/zoontek/react-native-localize)
-   - A toolbox for your React Native app localization.
-   - This library provides React Native developers with a cross-platform solution to the problem of internationalization.
 - [React Native MMKV](https://github.com/mrousavy/react-native-mmkv#readme)
   - The fastest key/value storage for React Native.
 
