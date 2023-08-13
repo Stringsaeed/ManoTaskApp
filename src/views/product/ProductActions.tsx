@@ -10,7 +10,7 @@ export default function ProductActions() {
     () => ({
       marginBottom: Math.max(16, bottom),
     }),
-    [],
+    [bottom],
   );
 
   const {product} = useProductContext();
