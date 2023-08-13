@@ -66,6 +66,8 @@ You've successfully run and modified your React Native App. :partying_face:
   - FastImage, performant React Native image component.
 - [React Native MMKV](https://github.com/mrousavy/react-native-mmkv#readme)
   - The fastest key/value storage for React Native.
+- [React Query](https://tanstack.com/query/latest/docs/react/overview)
+  - Powerful asynchronous state management for TS/JS
 
 
 # App Structure
